@@ -7,3 +7,8 @@ License: GNU GPLv3
 Version: 1.0
 https://www.gnu.org/licenses/gpl-3.0
 """
+
+from PIL import Image
+im = Image.open("*.jpg")
+resize = im.resize((1100,800),Image.Resampling.LANCZOS)
+resize.save("*.jpg")
