@@ -12,11 +12,11 @@ import os
 
 from PIL import Image
 
-Input = "C:/Users/Eric/Desktop/Images"
+input_path = "C:/Users/Eric/Desktop/Images"
 
-for file in os.listdir(Input):
-  if file.endswith(".jpg"):
-    im = Image.open(Input + "/{}".format(file))
+for f in os.listdir(input_path):
+  if f.endswith(".jpg"):
+    im = Image.open(Input + "/{}".format(f))
     resize = im.resize((1100,800),Image.Resampling.LANCZOS)
-    file_ext = os.path.splitext(file)
+    file_ext = os.path.splitext(f)
     resize.save("Copy/{}.jpg".format(file_ext))
